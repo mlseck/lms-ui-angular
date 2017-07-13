@@ -1,0 +1,28 @@
+<div class="container">
+	<div class ="box">
+		<h1>{{title}}</h1>
+
+		<table class="table" id="booksTable">
+				<tr>
+					<th>Book ID</th>
+					<th>Title</th>
+					<th>Author(s)</th>
+					<th>Publisher</th>
+					<th>Genre(s)</th>
+				</tr>
+					<tr *ngFor="let b of books">
+						<td>{{b.bookId}}</td>
+						<td>{{b.title}}</td>
+						<td>
+							{{b.authors}}
+						</td>
+						<td> {{b.publisher}}</td>
+						<td>
+							Genres Code
+						</td>
+						<td><button class="btn btn-default" type="button">Edit</button></td>
+					<td><button class="btn btn-danger" type="button">Delete</button></td>
+					</tr>
+		</table>
+  </div>
+</div>

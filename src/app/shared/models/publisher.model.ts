@@ -1,6 +1,8 @@
 export class Publisher  {
   publisherId: number;
-  pulisherName: string;
+  publisherName: string;
   publisherAddress: string;
   publisherPhone: string;
+  constructor() {
+  }
 }
