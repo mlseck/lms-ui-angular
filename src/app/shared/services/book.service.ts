@@ -2,18 +2,19 @@ import { Injectable } from "@angular/core";
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Book } from '../models/book.model';
+import * as myGlobals from './global'; //File where global variables are declared
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class BookService{
-  private baseUrl = "http://localhost:8090/api/books";  // web api URL
-
+  private baseUrl = myGlobals.apiurl + "/api/books";  // web api URL
   constructor(private http : Http){
   }
 
   getAll(): Observable<Book[]>{
+    console.log(this.baseUrl);
     return this.http.get(`${this.baseUrl}`)
       .map((response: Response) => response.json());
   }
