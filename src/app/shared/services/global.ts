@@ -3,4 +3,4 @@
 //
 'use strict';
 
-export const apiurl='http://52.15.115.146:8090/';
+export const apiurl='http://18.220.1.30:8090/';
