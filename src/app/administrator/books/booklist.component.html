@@ -14,11 +14,19 @@
 						<td>{{b.bookId}}</td>
 						<td>{{b.title}}</td>
 						<td>
-							{{b.authors}}
+							<ng-container *ngFor="let a of b.authors" >
+								{{a.authorName}}.
+							</ng-container>
 						</td>
-						<td> {{b.publisher}}</td>
 						<td>
-							Genres Code
+							<ng-container *ngIf="b.publisher != null" >
+								{{b.publisher.publisherName}}
+							</ng-container>
+						</td>
+						<td>
+							<ng-container *ngFor="let g of b.genres" >
+								{{g.genreName}}.
+							</ng-container>
 						</td>
 						<td><button class="btn btn-default" type="button">Edit</button></td>
 					<td><button class="btn btn-danger" type="button">Delete</button></td>

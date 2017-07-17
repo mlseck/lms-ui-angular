@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ModuleWithProviders, NgModule } from '@angular/core';
@@ -25,7 +26,8 @@ import {
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
